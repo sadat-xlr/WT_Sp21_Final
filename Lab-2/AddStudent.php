@@ -14,6 +14,7 @@
 		$credit="";
 		$err_credit="";
         $dob="";
+		$dept="";
        
         $err_dob="";
 		$notification="";
@@ -36,8 +37,9 @@
 			    $name=htmlspecialchars($_POST["name"]);
 				$credit=htmlspecialchars($_POST["credit"]);
 				$id=htmlspecialchars($_POST["credit"]);
+				$dept=$_POST["dept"];
 				$dob=$_POST["dob"];
-				$query="INSERT INTO `student`(`Name`, `StudentId`, `DOB`, `Credit`, `Depa.Id`) VALUES ('$name','$id','$dob','$credit','1')";
+				$query="INSERT INTO `student`(`Name`, `StudentId`, `DOB`, `Credit`, `Depa.Id`) VALUES ('$name','$id','$dob','$credit','$dept')";
 		        crud($query);
 				$notification="Student added";
             }
@@ -69,7 +71,7 @@
  </style>
     
     <fieldset>
-        <legend align="center"><h1>Club Member Registration Form</h1></legend>
+        <legend align="center"><h1>Registration Form</h1></legend>
         <form action="" method="post">
             <table align="center">
                 <tr>
@@ -94,7 +96,7 @@
                 </tr>
                <tr>
                     <td><Span>Department</Span></td>
-                    <td>:<Select>
+                    <td>:<Select name="dept">
 					<option>Csse</option>
 					<option>eee</option>
 					</select></td>
@@ -102,11 +104,12 @@
                 
    
 
-
+         
             </table>
-			<span style="color:Blue;"><?php echo $notification; ?></span></td>
+			
 			<input type="submit" name="submit" value="Add" style="margin-left:auto;margin-right:auto;display:block;margin-top:auto%;">
         </form>
+		  <span style="color:Blue;"><?php echo $notification; ?></span></td>
         
     </fieldset>
    
