@@ -1,25 +1,28 @@
 <?php
   
-  $server="localhost";
-  $user="root";
-  $pass="";
+  $db_server="localhost";
+  $db_user="root";
+  $db_pass="";
   $db_name="practice";
-  $con=mysqli_connect($server,$user,$pass,$db_name);
+  
   
   function crud($query){
-	  global $serever,$user,$pass,$db_name;
-	  $con=mysqli_connect($serever,$user,$pass,$db_name);
-	  mysqli_query($conn,$query);
+    global $db_server,$db_user,$db_pass,$db_name ;   
+	$db_con=mysqli_connect($db_server,$db_user,$db_pass,$db_name);	 
+	 mysqli_query($db_con,$query);
   }
   function get_data($query){
-	  global $serever,$user,$pass,$db_name;
-	  $con=mysqli_connect($serever,$user,$pass,$db_name);
-	  $result=mysqli_query($con,$query);
+      global $db_server,$db_user,$db_pass,$db_name ;  	  
+	  $db_con=mysqli_connect($db_server,$db_user,$db_pass,$db_name);
+	  $result=mysqli_query($db_con,$query);
 	  $data=[];
 	  if(mysqli_num_rows($result)>0){
 		  while($row=mysqli_fetch_assoc($result)){
 			  $data[]=$row;
 		  }
+	  }
+	  else{
+		  echo "loginfailed";
 	  }
 	  return $data;
   }
