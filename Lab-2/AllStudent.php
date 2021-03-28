@@ -2,7 +2,7 @@
  <?php 
     include"db_config.php";
     $query="select * from student";
-	get_data($query);
+	$result=get_data($query);
    ?>
 <div>
 <table>
