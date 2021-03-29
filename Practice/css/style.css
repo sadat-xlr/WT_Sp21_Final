@@ -1,0 +1,83 @@
+.headeroption{
+	background: #60c6eb;
+	height: 50px;
+	width: 800px;
+	font-family: roboto;
+	font-weight: bold;
+	overflow: hidden;
+	padding-left: : 170px;
+
+
+}
+body{
+	margin:0 auto;
+	width: 800px;
+	background: #06455c;
+}
+.footeroption{
+	background: #60c6eb;
+	height: 50px;
+	width: 800px;
+	font-family: roboto;
+	font-weight: bold;
+	overflow:hidden;
+	padding-left: : 170px;
+	
+
+}
+.content{
+	background: #f2f2f2;
+	border: 8px solid #60c6eb;
+	font-size: 16px;
+	line-height: 22px;
+	min-height: 500px;
+	overflow: hidden;
+	margin-top: 10px;
+	margin-bottom: 10px; 
+
+
+}
+.tmain{
+	background: #b7e5f7;
+	padding-left: 20px;
+	width: 100%;
+	border: 1px solid;
+	margin:20px,20px,20px,20px;
+
+}
+.tmain td{
+	text-align: center;
+}
+.actionlink{
+	text-decoration: none;
+	color: green;
+}
+.frm{
+	background: #b7e5f7;
+	text-align: center;
+	height: 500px;
+	overflow: hidden;
+	line-height: 55px;
+}
+.frm input[type=text] {
+	width: 200px;
+	height: 30px;
+	border-radius:5px;  
+}
+.frm input[type=submit] {
+	
+	background: #cda9fc;
+	width: 70px;
+	height: 30px;
+	border-radius:5px;  
+}
+.frm input[type=reset] {
+	
+	background: #cda9fc;
+	width: 70px;
+	height: 30px;
+	border-radius:5px;  
+}
+.frm span{
+	font-size: 20px;
+}
