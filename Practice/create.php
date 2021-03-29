@@ -7,17 +7,17 @@
 <?php
   $db=new Database();
   
- if(isset($_POST['submit']))
+ if(isset($_POST['create']))
  {
- 	$Name=mysqli_real_escape_string($db->link,$_POST['Name']);
- 	$Email=mysqli_real_escape_string($db->link,$_POST['Email']);
- 	$Skill=mysqli_real_escape_string($db->link,$_POST['Skill']);
- 	if($Name==''|| $Email==''||$Skill==''){
+ 	$name=mysqli_real_escape_string($db->link,$_POST['Name']);
+ 	$email=mysqli_real_escape_string($db->link,$_POST['Email']);
+ 	$skill=mysqli_real_escape_string($db->link,$_POST['Skill']);
+ 	if($name==''|| $email==''||$skill==''){
  		$error="Field Can Not Be Empty ";
  	
  	}
  	else{
- 		$query="INSERT INTO user(Name,Email,Skill) values('$Name','$Email','$Skill')";
+ 		$query="INSERT INTO user(Name,Email,Skill) values('$name','$email','$skill')";
  		$create=$db->insert($query);
  	}
 
@@ -50,7 +50,7 @@
       	echo"<span style='color:red;'>".$error."</span>";
       }
 	?><br>
-       <span><input type="submit" name="submit" value="insert">  </span> <span><input type="reset" name="submit" value="clear"></span> 
+       <span><input type="submit" name="create" value="insert">  </span> <span><input type="reset" name="submit" value="clear"></span> 
 	
     </form>
     

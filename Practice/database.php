@@ -47,5 +47,29 @@ class Database
     	}
 
     }
+    //update data
+    public function update($query){
+    	$update_row=$this->link->query($query) or die($this->link->error.__LINE__);
+    	if($update_row){
+    		header("Location:index.php?msg=".urlencode('data inserted successfully'));
+    		exit();
+    	}
+    	else{
+    		die($this->link->error.__LINE__);
+    	}
+
+    }
+    //delete
+    public function delete($query){
+    	$delete_row=$this->link->query($query) or die($this->link->error.__LINE__);
+    	if($delete_row){
+    		header("Location:index.php?msg=".urlencode('data inserted successfully'));
+    		exit();
+    	}
+    	else{
+    		die($this->link->error.__LINE__);
+    	}
+
+    }
 }
 ?>

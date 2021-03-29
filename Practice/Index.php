@@ -11,10 +11,10 @@
 <div>
 
 	<a  href="create.php">Insert </a>
-	<span><?php
-      if(isset($GET['msg']))
+	<span style="font-size:25px; color: green;padding-left: 240px;"><?php
+      if(isset($_GET['msg']))
       {
-      	echo"<span>".$GET['msg']."</span>";
+      	echo"<span>".$_GET['msg']."</span>";
       }
 	?></span>
 <table class="tmain">
@@ -31,7 +31,7 @@
  	<td><?php echo $row['Name'];?></td>
  	<td><?php echo $row['Email'];?></td>
  	<td><?php echo $row['Skill'];?></td>
- 	<td><a class="actionlink" href="update.php?id=<?php echo $row['Id'];?>">Edit</a>  |  <a style="color: red;" class="actionlink" href="delete.php?id=<?php echo $row['Id'];?>">Delete</a>
+ 	<td><a class="actionlink" href="update.php?id=<?php echo urlencode($row['Id']);?>">Edit</a>  |  <a style="color: red;" class="actionlink" href="delete.php?id=<?php echo urlencode($row['Id']);?>">Delete</a>
  	</td>
 
  	
